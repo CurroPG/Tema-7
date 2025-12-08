@@ -3,6 +3,7 @@ package Ejercicio17;
 public class App {
     public static int[] girarDerecha(int[] array, int numero) {
         int posicion = 0;
+        int aux[] = array;
         int lastDigit = 0;
         int indice = 0;
         int resultado[] = new int[array.length];
@@ -17,14 +18,15 @@ public class App {
                 if (i == 0)
                     resultado[indice++] = lastDigit;
                 else
-                    resultado[indice++] = array[i - 1];
+                    resultado[indice++] = aux[i - 1];
             }
             for (int i = 0; i < array.length; i++) {
-                if (resultado[i] == numero)
+                if (aux[i] == numero)
                     posicion = i;
                 if (i == (array.length - 1))
                     lastDigit = resultado[i];
             }
+            aux = resultado;
             indice = 0;
         }
         return resultado;
