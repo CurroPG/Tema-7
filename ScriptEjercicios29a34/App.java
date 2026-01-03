@@ -29,6 +29,6 @@ public class App {
         System.out.println();
         System.out.println("==========================");
 
-        FuncionesBidimensionales.diagonal(3, 4, "nose", array);
+        FuncionesBidimensionales.diagonal(3, 4, "neso", array);
     }
 }
